@@ -67,5 +67,3 @@ git config --global merge.ff false
 # Profile order
 PROFILE_ORDER=$PROFILE_ORDER:'.global_profile.sh'
 export PROFILE_ORDER
-
-# Sample edit for sync test
