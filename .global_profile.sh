@@ -5,6 +5,8 @@ parse_git_branch() {
 }
 export PS1="\e[32m\u@\h \[\033[39m\]\w\[\033[34m\]\n$(parse_git_branch)\[\033[00m\]λ "
 
+export PS1="\u@\h \[\033[32m\]\w\[\033[34m\]\$(parse_git_branch)\[\033[00m\] λ "
+
 # Aliases
 alias ll='ls -FGlhp'
 cd() { builtin cd "$@"; ll; }
