@@ -60,7 +60,7 @@ git config --global diff.mnemonicprefix true
 git config --global branch.push.default tracking
 git config --global branch.autosetupmerge true
 git config --global merge.stat true
-git config --global user.email "jbroome@uw.edu"
+git config --global user.email "jb@jaibroome.com"
 git config --global user.name "Jai Broome"
 git config --global merge.ff false
 
@@ -74,7 +74,7 @@ prof_diff(){
 	    printf "\n"
 	    read -p "$1 has been modified. Proceed? (y/n): " yn
 	    case $yn in
-	        [Yy]* ) cp $2/$1 $1;;
+	        [Yy]* ) cp $2/$1 $1; echo "$1 updated. Log in again";;
 	        [Nn]* ) echo "$1 not updated";;
 	        * ) echo "Please answer 'y' or 'n'";;
 	    esac
