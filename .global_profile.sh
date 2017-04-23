@@ -74,7 +74,7 @@ prof_diff(){
 	    printf "\n"
 	    read -p "$1 has been modified. Proceed? (y/n): " yn
 	    case $yn in
-	        [Yy]* ) cp $2/$1 $1; echo "$1 updated. Log in again";;
+	        [Yy]* ) cp $2/$1 $1;;
 	        [Nn]* ) echo "$1 not updated";;
 	        * ) echo "Please answer 'y' or 'n'";;
 	    esac
