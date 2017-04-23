@@ -79,6 +79,7 @@ prof_diff(){
 	        * ) echo "Please answer 'y' or 'n'";;
 	    esac
 	fi
+	source $1
 }
 
 export -f prof_diff
