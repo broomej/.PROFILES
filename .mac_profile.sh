@@ -6,3 +6,7 @@ trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the 
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias finderShowHidden='defaults write com.apple.finder ShowAllFiles TRUE'
 alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'
+
+PROFILE_ORDER=$PROFILE_ORDER:".mac_profile.sh"
+export PROFILE_ORDER
+
