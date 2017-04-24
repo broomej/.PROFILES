@@ -1,11 +1,11 @@
 # Prompt
 # Via: https://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+parse_git_branch() { 
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' 
 }
-export PS1="\e[32m\u@\h \[\033[39m\]\w\[\033[34m\]\n$(parse_git_branch)\[\033[00m\]λ "
+#export PS1="\e[32m\u@\h \[\033[39m\]\w\[\033[34m\]\n$(parse_git_branch)\[\033[00m\]λ "
 
-export PS1="\u@\h \[\033[32m\]\w\[\033[34m\]\$(parse_git_branch)\[\033[00m\] λ "
+export PS1="\u@\h \[\033[32m\]\w\[\033[34m\]\$(parse_git_branch)\[\033[00m\]λ "
 
 # Aliases
 alias ll='ls -FGlhp'
@@ -31,6 +31,7 @@ alias prof="$EDITOR ~/.bash_profile"
 
 alias sshf="ssh -t jbroome@fisher.gcc.biostat.washington.edu 'bash -l'"
 alias sshp="ssh -t jbroome@pearson.gcc.biostat.washington.edu 'bash -l'"
+alias sshws="ssh jbroome@gcc-mac-010.gcc.biostat.washington.edu"
 
 # Settings
 set completion-ignore-case On
