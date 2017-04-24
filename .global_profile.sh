@@ -4,7 +4,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' 
 }
 
-export PS1="\u@\h \[\033[32m\]\w\[\033[34m\]\$(parse_git_branch)\[\033[00m\] λ "
+export PS1="\u@\h \[\033[32m\]\w\[\033[34m\]\$(parse_git_branch)\[\033[00m\] \e[2mλ\e[0m "
 
 # Aliases
 alias ll='ls -FGlhp'
@@ -87,5 +87,3 @@ export -f prof_diff
 
 PROFILE_ORDER=$PROFILE_ORDER:'.global_profile.sh'
 export PROFILE_ORDER
-
-# symlink test 2
