@@ -9,4 +9,3 @@ alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'
 
 PROFILE_ORDER=$PROFILE_ORDER:".mac_profile.sh"
 export PROFILE_ORDER
-

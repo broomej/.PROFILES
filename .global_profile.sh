@@ -8,6 +8,7 @@ export PS1="\u@\h \[\033[32m\]\w\[\033[34m\]\$(parse_git_branch)\[\033[00m\] \e[
 
 # Aliases
 alias ll='ls -FGlhp'
+alias la='ll -a'
 cd() { builtin cd "$@"; ll; }
 alias cd.='cd ../'
 alias cd..='cd ../../'
