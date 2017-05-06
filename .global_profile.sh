@@ -67,23 +67,23 @@ git config --global user.name "Jai Broome"
 git config --global merge.ff false
 
 # Profiles
-prof_diff(){
-	DIFF=$(diff $1 $2/$1)
-	if [ "$DIFF" != "" ] 
-	then
-		echo "$1 diff:"
-	    echo $DIFF
-	    printf "\n"
-	    read -p "$1 has been modified. Proceed? (y/n): " yn
-	    case $yn in
-	        [Yy]* ) cp $2/$1 $1;;
-	        [Nn]* ) echo "$1 not updated";;
-	        * ) echo "Please answer 'y' or 'n'";;
-	    esac
-	fi
-	source $1
-}
-
+prof_diff() { 
+    DIFF=$(diff $1 $2/$1) 
+    if [ "$DIFF" != "" ]  
+    then 
+        echo "$1 diff:" 
+        echo $DIFF 
+        # printf "\n" 
+        read -p "$1 has been modified. Proceed? (y/n): " yn 
+        case $yn in 
+            [Yy]* ) cp $2/$1 $1;; 
+            [Nn]* ) echo "$1 not updated";; 
+            * ) echo "Please answer 'y' or 'n'";; 
+        esac 
+    fi 
+    source $1 
+} 
+ 
 export -f prof_diff
 
 PROFILE_ORDER=$PROFILE_ORDER:'.global_profile.sh'
